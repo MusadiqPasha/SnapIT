@@ -1,6 +1,10 @@
 # SnapIT
 SnapIT is a sleek, user-friendly web app for seamless image sharing, backed by MongoDB and Node.js for storing user details. Users can send one image at a time, with each new image replacing the previous one, and sent to all their friends instantly. This approach helps to minimize digital clutter and encourages more meaningful and intentional sharing, promoting a healthier and more balanced online experience.
 
+### Demo
+
+<img src='https://github.com/MusadiqPasha/SnapIT/blob/main/demo/demo-gif.gif'>
+
 ## Features
 
 - Seamless image sharing between users.
@@ -57,8 +61,6 @@ SnapIT is a sleek, user-friendly web app for seamless image sharing, backed by M
 5. Start the server: `npm start`
 6. Open your web browser and navigate to `http://localhost:3000`
 
-## Demo
-[]([demo/videos/demo_video.mp4](https://github.com/MusadiqPasha/SnapIT/blob/main/demo/demo-vid.mp4))
 
 ## License
 **This project is licensed under the MIT License - see the LICENSE file for details.**
