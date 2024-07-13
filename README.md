@@ -48,7 +48,7 @@ SnapIT is a sleek, user-friendly web app for seamless image sharing, backed by M
 
 ## Setup Instructions
 
-1. Clone the repository: `git clone [https://github.com/your-username/snapit.git](https://github.com/MusadiqPasha/SnapIT.git)`
+1. Clone the repository: `git clone https://github.com/MusadiqPasha/SnapIT.git`
 2. Navigate to the project directory: `cd snapit`
 3. Install dependencies: `npm install`
 4. Set up MongoDB:
@@ -57,6 +57,9 @@ SnapIT is a sleek, user-friendly web app for seamless image sharing, backed by M
 5. Start the server: `npm start`
 6. Open your web browser and navigate to `http://localhost:3000`
 
+## Demo
+
+[![SnapIT Demo Video](https://github.com/MusadiqPasha/SnapIT/blob/main/demo/demo-SnapIT.mp4)](https://github.com/MusadiqPasha/SnapIT/blob/main/demo/demo-SnapIT.mp4)
 
 ## License
 **This project is licensed under the MIT License - see the LICENSE file for details.**
