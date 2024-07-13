@@ -59,7 +59,7 @@ SnapIT is a sleek, user-friendly web app for seamless image sharing, backed by M
 
 ## Demo
 
-<img src='https://github.com/MusadiqPasha/SnapIT/blob/main/demo/demo-vid.mp4'>
+[![SnapIt]()](https://github.com/MusadiqPasha/SnapIT/blob/main/demo/demo-vid.mp4)
 
 ## License
 **This project is licensed under the MIT License - see the LICENSE file for details.**
