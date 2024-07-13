@@ -11,11 +11,28 @@ SnapIT is a sleek, user-friendly web app for seamless image sharing, backed by M
 # Pages
 
 **Home: The landing page of the application.**
+
 <img src="https://github.com/MusadiqPasha/SnapIT/blob/main/demo/homepage.png">
 
-Sign Up: Register a new account.
-Sign In: Log into an existing account.
-Chat: Send and receive messages with friends.
-Search Profile: Find and connect with other users.
-View Profile: View details of user profiles.
-Main Interface: Access the webcam, take pictures, and manage image sending.
+**Sign Up: Register a new account.**
+
+<img src="https://github.com/MusadiqPasha/SnapIT/blob/main/demo/signup.png">
+
+**Sign In: Log into an existing account.**
+
+<img src="https://github.com/MusadiqPasha/SnapIT/blob/main/demo/signin.png">
+
+**Main Interface**
+
+<img src="https://github.com/MusadiqPasha/SnapIT/blob/main/demo/main">
+
+**Search Profile: Find and connect with other users.**
+
+<img src="https://github.com/MusadiqPasha/SnapIT/blob/main/demo/search.png">
+
+**View Profile: View details of user profiles.**
+
+<img src="https://github.com/MusadiqPasha/SnapIT/blob/main/demo/profile.png">
+
+
+
