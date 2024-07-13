@@ -1,0 +1,168 @@
+[
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4360" },
+      "username": "Alice",
+      "phone": "5551234567",
+      "email": "alice@example.com",
+      "password": "password1",
+      "dob": "1995-05-15",
+      "gender": "female",
+      "location": "Canada",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4361" },
+        { "$oid": "668fdac1a5ffab881a3b4362" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4361" },
+      "username": "Bob",
+      "phone": "5552345678",
+      "email": "bob@example.com",
+      "password": "password2",
+      "dob": "1988-12-10",
+      "gender": "male",
+      "location": "USA",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4360" },
+        { "$oid": "668fdac1a5ffab881a3b4363" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4362" },
+      "username": "Charlie",
+      "phone": "5553456789",
+      "email": "charlie@example.com",
+      "password": "password3",
+      "dob": "2000-03-25",
+      "gender": "male",
+      "location": "UK",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4360" },
+        { "$oid": "668fdac1a5ffab881a3b4364" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4363" },
+      "username": "David",
+      "phone": "5554567890",
+      "email": "david@example.com",
+      "password": "password4",
+      "dob": "1992-07-07",
+      "gender": "male",
+      "location": "Australia",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4361" },
+        { "$oid": "668fdac1a5ffab881a3b4365" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4364" },
+      "username": "Eve",
+      "phone": "5555678901",
+      "email": "eve@example.com",
+      "password": "password5",
+      "dob": "1998-11-30",
+      "gender": "female",
+      "location": "India",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4362" },
+        { "$oid": "668fdac1a5ffab881a3b4366" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4365" },
+      "username": "Frank",
+      "phone": "5556789012",
+      "email": "frank@example.com",
+      "password": "password6",
+      "dob": "1985-02-14",
+      "gender": "male",
+      "location": "Germany",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4363" },
+        { "$oid": "668fdac1a5ffab881a3b4367" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4366" },
+      "username": "Grace",
+      "phone": "5557890123",
+      "email": "grace@example.com",
+      "password": "password7",
+      "dob": "1991-08-20",
+      "gender": "female",
+      "location": "Japan",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4364" },
+        { "$oid": "668fdac1a5ffab881a3b4368" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4367" },
+      "username": "Hank",
+      "phone": "5558901234",
+      "email": "hank@example.com",
+      "password": "password8",
+      "dob": "1993-04-05",
+      "gender": "male",
+      "location": "Brazil",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4365" },
+        { "$oid": "668fdac1a5ffab881a3b4369" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4368" },
+      "username": "Ivy",
+      "phone": "5559012345",
+      "email": "ivy@example.com",
+      "password": "password9",
+      "dob": "1989-09-09",
+      "gender": "female",
+      "location": "France",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4366" },
+        { "$oid": "668fdac1a5ffab881a3b4370" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4369" },
+      "username": "Jack",
+      "phone": "5550123456",
+      "email": "jack@example.com",
+      "password": "password10",
+      "dob": "1990-06-21",
+      "gender": "male",
+      "location": "South Africa",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4367" },
+        { "$oid": "668fdac1a5ffab881a3b4370" }
+      ],
+      "__v": 0
+    },
+    {
+      "_id": { "$oid": "668fdac1a5ffab881a3b4370" },
+      "username": "Kara",
+      "phone": "5551230987",
+      "email": "kara@example.com",
+      "password": "password11",
+      "dob": "1997-01-18",
+      "gender": "female",
+      "location": "Italy",
+      "friends": [
+        { "$oid": "668fdac1a5ffab881a3b4368" },
+        { "$oid": "668fdac1a5ffab881a3b4369" }
+      ],
+      "__v": 0
+    }
+  ]
+  

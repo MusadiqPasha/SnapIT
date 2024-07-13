@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SnapIT</title>
+    <link rel="stylesheet" href="style_finalinterface.css" />
+  </head>
+  <body>
+    <main>
+      <div class="navbar">
+        <h1><a href="mainpage.html">SnapIT</a></h1>
+        <ul>
+            <li><a href="mainpage.html">Home</a></li> 
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="mainpage.html">Log Out</a></li>
+        </ul>
+      </div>
+
+      <div class="camera">
+        <video id="webcam" autoplay></video>
+        <canvas id="snapshotCanvas"></canvas>
+
+        <div class="camera-buttons">
+          <button id="discardButton" style="display: none"></button>
+          <button id="saveButton" style="display: none"></button>
+        </div>
+
+        <div class="other-buttons">
+          <button id="chatbutton"></button>
+          <button id="snapButton"></button>
+          <button id="addUser"></button>
+          <button id="viewProfile"></button>
+        </div>
+
+      </div>
+
+    </main>
+    <script src="script_finalInterface.js"></script>
+  </body>
+</html>

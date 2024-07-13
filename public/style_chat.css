@@ -1,0 +1,182 @@
+/* style_chat.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif;
+  background-color: rgb(159, 90, 159);
+  color: black;
+  display: flex;
+  flex-direction: column; /* Set the body to be a flex container */
+  min-height: 100vh; /* Make sure the body takes at least the full height of the viewport */
+}
+
+.modal-body {
+  text-align: center;
+  border-radius: 20px;
+}
+
+#modalImage {
+  width: 100%; /* Set the width of the image to 100% of the modal body */
+  height: auto; /* Maintain the aspect ratio of the image */
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 20px;
+}
+#modalClose{
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #bb2b21;
+  background: white;
+  cursor: pointer;
+}
+
+#modalClose:hover{
+  background: #000;
+}
+
+.main {
+  align-items: center;
+  align-content: center;
+  display: inline-block;
+  
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-bottom: 20px; /* Adjust padding as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+#friendsListContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 2 columns */
+  gap: 15px; /* 10px gap between items */
+
+}
+#friendsListContainer .btn {
+  color: #000;
+  width: 150px; /* Set desired width */
+  height: 75px; /* Set desired height */
+  font-size: 25px; /* Adjust font size if needed */
+  border-radius: 25px;
+}
+
+
+.UserProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* All Buttons */
+
+.navbar {
+  width: 100%;
+  background-color: #000000;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.navbar h1 a {
+  text-decoration: none;
+  color: #eae750;
+  font-size: 24px;
+  margin-left: 75px;
+  transition: color 0.3s;
+  position: relative; /* Add this to position the pseudo-element correctly */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: color 0.3s;
+  position: relative; /* Add this to position the pseudo-element correctly */
+}
+
+.navbar ul li::after,
+.navbar h1 a::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.5s;
+}
+
+.navbar ul li:hover::after,
+.navbar h1 a:hover::after {
+  width: 100%;
+}
+
+.navbar ul li a:hover,
+.navbar h1 a:hover {
+  color: #009688;
+}
+
+/* Move the taskbar to the bottom */
+.other-buttons {
+  background-color: black;
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* Center the buttons */
+  height: 85px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.other-buttons button {
+  background-color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px 70px;
+  font-size: 16px;
+  cursor: pointer;
+  background-position: center; /* Adjust as needed */
+  background-repeat: no-repeat; /* Ensures the image is not repeated */
+  width: 40px; /* Set a specific width for the button */
+  height: 40px; /* Set a specific height for the button */
+  border: none; /* Remove the default button border */
+  color: white; /* Set button text color to white */
+}
+
+.other-buttons button#chatbutton {
+  background-image: url("images/chat.png");
+}
+
+.other-buttons button#snapButton {
+  background-image: url("images/snap.png");
+}
+
+.other-buttons button#addUser {
+  background-image: url("images/adduser.png");
+}
+
+.other-buttons button#backButton {
+  background-image: url("images/back.png");
+}
+
+.other-buttons button#viewProfile {
+  background-image: url("images/person.png");
+}

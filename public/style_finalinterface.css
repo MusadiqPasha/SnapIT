@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  background-color: black;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.navbar {
+  width: 100%;
+  background-color: #000000;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.navbar h1 a {
+  text-decoration: none; 
+  color: #eae750; 
+  font-size: 24px;
+  margin-left: 75px;
+  transition: color 0.3s;
+  position: relative; /* Add this to position the pseudo-element correctly */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: color 0.3s;
+  position: relative; /* Add this to position the pseudo-element correctly */
+}
+
+.navbar ul li::after, .navbar h1 a::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.5s;
+}
+
+.navbar ul li:hover::after, .navbar h1 a:hover::after {
+  width: 100%;
+}
+
+.navbar ul li a:hover, .navbar h1 a:hover {
+  color: #009688;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.camera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 85vh;
+  position: relative;
+}
+.camera img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.camera canvas {
+  display: none;
+}
+
+.other-buttons,
+.camera-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.other-buttons button,
+.camera-buttons button {
+  background-color: black;
+  padding: 20px 70px;
+  font-size: 16px;
+  cursor: pointer;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 40px; 
+  height: 40px;
+  border: none; 
+}
+
+#discardButton {
+  display: none;
+}
+
+.other-buttons button#chatbutton {
+  background-image: url("images/chat.png");
+}
+
+.other-buttons button#snapButton {
+  background-image: url("images/snap.png");
+}
+
+.other-buttons button#addUser {
+  background-image: url("images/adduser.png");
+}
+
+.other-buttons button#viewProfile {
+  background-image: url("images/person.png");
+}
+
+.camera-buttons button#saveButton {
+  background-image: url("images/share.png");
+}
+
+.camera-buttons button#discardButton {
+  background-image: url("images/discard.png");
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- views/searchresults.ejs -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Search Results</title>
+  <link rel="stylesheet" href="style_searchresults.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1><a href="mainpage.html">SnapIT</a></h1>
+          <ul>
+              <li><a href="mainpage.html">Home</a></li> 
+              <li><a href="signup.html">Sign Up</a></li>
+              <li><a href="mainpage.html">Logout</a></li>
+          </ul>
+        </div>
+
+    <div class="search">
+        <form action="/searchresults" method="get">
+            <label for="searchName"><h2>Search by Username:</h2></label>
+            <!-- Adjusted the width of the searchName input -->
+            <input type="text" id="searchName" name="name" placeholder="Enter Username">
+            
+        </form>
+        <% if (searchQuery) { %>
+        <h2>Results for "<%= searchQuery %>"</h2>
+        <!-- Search Box Form -->
+        <% if (users.length === 0) { %>
+        <h2>No users found.</h2>
+        <% } else { %>
+            <% users.forEach(user => { %>
+                <button class="addFriendButton" data-userid="<%= user._id %>" data-username="<%= user.username %>">
+                    <%= user.username %>
+                </button>
+            <% }); %>
+            
+        <% } %>
+        <% } %>
+    </div>
+
+    <div class="other-buttons">
+        <button id="chatbutton"></button>
+        <button id="addUser"></button>
+        <button id="viewProfile"></button>
+        <button id="backButton"></button>
+    </div>
+
+    <script>
+        var friendList = [];
+
+        document.getElementById('addUser').addEventListener('click', function() {
+        // Send the friendList to the server
+            
+            window.location.href =  '/searchresults';
+        });
+
+        document.getElementById('chatbutton').addEventListener('click', function() {
+            window.location.href = '/chat';
+        });
+
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'finalInterface.html';
+        });
+
+        document.getElementById('viewProfile').addEventListener('click', function() {
+            window.location.href =  '/viewprofile';
+        });
+
+        document.querySelectorAll('.addFriendButton').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var userId = this.getAttribute('data-userid');
+            var friendName = this.getAttribute('data-username');
+
+            if (!friendList.includes(userId)) 
+            {
+                friendList.push(userId);
+                sendFriendListToServer();
+                window.confirm('Adding ' + friendName + ' as a friend:', userId);
+                console.log('Friend List:', friendList);
+            } else {
+                window.alert(friendName+' is already in the friendz list:', userId);
+                    }
+                });
+            });
+            
+            function sendFriendListToServer() {
+                // Create a new XMLHttpRequest object
+                var xhr = new XMLHttpRequest();
+
+                // Specify the request type (POST) and URL
+                xhr.open('POST', '/addFriends', true);
+
+                // Set the request header
+                xhr.setRequestHeader('Content-Type', 'application/json');
+
+                // Convert the friendList array to JSON and send it in the request body
+                var requestBody = JSON.stringify({ friendList: friendList });
+                xhr.send(requestBody);
+                }
+
+
+
+    </script>
+
+</body>
+</html>

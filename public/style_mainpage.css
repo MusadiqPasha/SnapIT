@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.navbar {
+    width: 100%;
+    background-color: #000000;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.navbar h1 a {
+    text-decoration: none; 
+    color: #eae750; 
+    font-size: 24px;
+    margin-left: 75px;
+    transition: color 0.3s;
+    position: relative; /* Add this to position the pseudo-element correctly */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: color 0.3s;
+    position: relative; /* Add this to position the pseudo-element correctly */
+}
+
+.navbar ul li::after, .navbar h1 a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.5s;
+}
+
+.navbar ul li:hover::after, .navbar h1 a:hover::after {
+    width: 100%;
+}
+
+.navbar ul li a:hover, .navbar h1 a:hover {
+    color: #009688;
+}
+
+.content1 {
+    height: 90vh;
+    background-image: url('images/bg_main1.jpg'); /* Add the path to your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+}
+
+.content2 {
+    height: 80vh;
+    background-image: url('images/bg_main2.jpg'); /* Add the path to your background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+}
+
+.content1 .overlay , .content2.overlay , .button-container button.overlay{
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+}
+
+.content1 h1  {
+    font-size: 58px;
+    margin: 0;
+    max-width: 500px;
+    align-content:center;
+}
+.content1 p {
+    padding-top: 80px;
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+.content2 h1 {
+    font-size: 40px;
+    margin: 0;
+    max-width: 500px;
+    align-content:center;
+}
+
+.content2 button{
+    margin-top: 25px;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background: black;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    border-radius: 12px;
+    border: none;
+    transition: background-color 0.3s;
+}
+.content2 button:hover {
+    background-color: purple;
+}

@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("images/login_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  max-width: 500px;
+  width: 100%;
+}
+h2 {
+  text-align: center;
+  font-size: 35px;
+}
+label,
+input {
+  display: block;
+  margin-bottom: 15px;
+}
+input[type="text"],
+input[type="password"] {
+  width: 80%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+input[type="submit"] {
+  background-color: rgba(75, 33, 202, 0.5);
+  color: black;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  width: 40%;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline;
+}
+input[type="button"] {
+  background-color: rgba(75, 33, 202, 0.5);
+  color: black;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  width: 40%;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5%;
+  display: inline;
+}
+input[type="submit"]:hover {
+  background-color: #ec67c4;
+}
+input[type="button"]:hover {
+  background-color: #ef2b4b;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- views/new.ejs -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/besrourms/zodiacsigns@latest/index.min.js"></script>
+    <link rel="stylesheet" href="style_chat.css">
+</head>
+
+<body>
+    <main>
+        <div class="navbar">
+            <h1><a href="mainpage.html">SnapIT</a></h1>
+              <ul>
+                  <li><a href="mainpage.html">Home</a></li> 
+                  <li><a href="signup.html">Sign Up</a></li>
+                  <li><a href="mainpage.html">Logout</a></li>
+              </ul>
+            </div>
+
+        <div class="main" id="friendsListContainer">
+            <!-- Friends list will be dynamically populated here -->
+        </div>
+        <div class="banner">
+            <div class="other-buttons">
+                <button id="chatbutton"></button>
+                <button id="snapButton"></button>
+                <button id="addUser"></button>
+                <button id="backButton"></button>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+    document.getElementById('addUser').addEventListener('click', function () {
+        window.location.href = '/searchresults';
+    });
+
+    document.getElementById('chatbutton').addEventListener('click', function () {
+        window.location.href = '/chat';
+    });
+
+    document.getElementById('backButton').addEventListener('click', function () {
+        window.location.href = 'finalInterface.html';
+    });
+
+    document.getElementById('snapButton').addEventListener('click', function () {
+        window.location.href = 'finalInterface.html';
+    });
+
+    fetch('/getFriends')
+        .then(response => response.json())
+        .then(data => {
+            
+            const friendsListContainer = document.getElementById('friendsListContainer');
+            data.friends.forEach(friend => {
+            
+                const userProfile = document.createElement('div');
+                userProfile.className = 'UserProfile';
+
+                const friendButton = document.createElement('button');
+                friendButton.className = 'btn btn-danger'; // Initial color is red
+                friendButton.innerText = friend.username;
+
+
+                friendButton.addEventListener('click', function () {
+                if (friendButton.classList.contains('btn-danger')) {
+                    // Change color to blue after clicking
+                    friendButton.classList.remove('btn-danger');
+                    friendButton.classList.add('btn-success');
+
+                    // Open the image in the modal
+                    const modalImage = document.getElementById('modalImage');
+                    const dataFolderPath = "data/";
+                    const filePath = dataFolderPath + String(friend.username) + ".png";
+                    // Check if the image exists
+                    const img = new Image();
+                    img.onload = function() {
+                        modalImage.src = filePath; // Set the image path if it exists
+                    };
+                    img.onerror = function() {
+                        modalImage.src = "images/defaultSnap.jpg"; // Set default image if the image doesn't exist
+                    };
+                    img.src = filePath;
+
+                    $('#imageModal').modal('show');
+                }
+            });
+
+
+                userProfile.appendChild(friendButton);
+                friendsListContainer.appendChild(userProfile);
+            });
+        })
+        .catch(error => console.error('Error fetching friends:', error));
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Modal for displaying image -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- Add image inside the body of modal -->
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Image" />
+                    <button id="modalClose" type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

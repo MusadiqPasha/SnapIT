@@ -1,0 +1,145 @@
+body {
+  background-color: #ae9ea9;
+  display: flex;
+  margin: 0;
+  margin-top: 0px !important;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  flex-direction: column;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #ae9ea9;
+  display: flex;
+  align-items: center;
+  margin-top: 0px !important;
+  justify-content: space-between;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.navbar h1 a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  margin-left: 100px;
+  transition: color 0.3s;
+  position: relative; /* Add this to position the pseudo-element correctly */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+  font-size: 25px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+  font-size: larger;
+  font-size: 18px;
+  transition: color 0.3s;
+  position: relative; /* Add this to position the pseudo-element correctly */
+}
+
+.navbar ul li::after,
+.navbar h1 a::after {
+  content: "";
+  height: 3px;
+  width: 0px;
+  background: black;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.5s;
+}
+
+.navbar ul li:hover::after,
+.navbar h1 a:hover::after {
+  width: 100%;
+}
+
+.navbar ul li a:hover,
+.navbar h1 a:hover {
+  color: #000000;
+  height: 2px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px !important;
+  max-width: 700px;
+  max-height: max-content;
+  border-radius: 75px;
+  background-color: #fff;
+  overflow: hidden; /* Ensure content fits within the container */
+}
+
+.left-column {
+  flex: 1;
+  border-radius: 75px;
+  padding: 15px;
+  background-image: url("images/signup.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.right-column {
+  flex: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+label,
+input {
+  display: block;
+  margin-bottom: 3px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  width: 85%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.gender-options {
+  display: flex;
+  align-items: center;
+}
+
+.gender-options input[type="radio"] {
+  margin-right: 7px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: white;
+  width: 92%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}

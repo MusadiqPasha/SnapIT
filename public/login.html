@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style_login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login.html" method="post">
+            <label style="font-size: 140%; font-family: Arial, sans-serif; font-weight: bold;" for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label style="font-size: 140%; font-family: Arial, sans-serif; font-weight: bold;" for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="button" value="Back" onclick="window.location.href='mainpage.html' ">
+            <input type="submit" value="Login">
+        </form>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            if (error) {
+                alert(error);
+            }
+        </script>
+    </div>
+</body>
+</html>
